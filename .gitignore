@@ -1,0 +1,7 @@
+*.log
+*.txt
+*.jpg
+!requirements.txt
+*.pyc
+*.json
+*.xodr

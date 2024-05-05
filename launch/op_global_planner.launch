@@ -1,0 +1,12 @@
+<launch>
+  <!-- op_global_planner -->
+  <include file='$(find op_global_planner)/launch/op_global_planner.launch'>
+    <arg name='enableReplan' value='true'/>
+    <arg name='enableSmoothing' value='true'/>
+    <arg name='enableLaneChange' value='true'/>
+    <arg name='enableRvizInput' value='true'/>
+    <arg name='velocitySource' value='1'/>
+    <arg name='mapSource' value='0'/>
+    <arg name='pathDensity' value='0.5'/>
+  </include>
+</launch>

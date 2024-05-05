@@ -1,0 +1,43 @@
+<launch>
+  <!-- op_local_planner -->
+  <include file='$(find op_local_planner)/launch/op_common_params.launch'>
+    <arg name='mapSource' value='0'/>
+    <arg name="enableSwerving" value="true" />
+	  <arg name="enableFollowing" value="true" />
+    <arg name="enableTrafficLightBehavior" value="true" />
+    <arg name="enableStopSignBehavior" value="true" />	
+    <arg name="enableLaneChange" value="true" />
+    <arg name="maxWheelAngle" value="1.0" />
+    <arg name="rollOutsNumber" value="12" />	
+    <arg name="maxDistanceToAvoid" value="1.0" />
+    <arg name="horizontalSafetyDistance" value="0.5" />
+	  <arg name="verticalSafetyDistance"  value="0.5" />
+    <arg name="maxAcceleration" value="100.0" />
+    <arg name="maxDeceleration" value="-20.0" />
+    <arg name="maxVelocity" value="100.0" />
+    <arg name='use_internal_acc' value='true' />
+    <arg name='steeringDelay' value='0.1' />
+    <arg name='wheelBaseLength' value='2.835' />
+    <arg name='height' value='1.416' />
+    <arg name='width' value='1.850' />
+    <arg name='length' value='4.686'/>
+    <arg name='speedProfileFactor' value='1.0'/>
+    <arg name='minPursuiteDistance' value='0.1'/>
+    <arg name='brakingPushRatio' value='1.0' />
+  </include>
+
+  <include file='$(find op_local_planner)/launch/op_trajectory_generator.launch'>
+    <arg name='enableForwardSimulation' value='false'/>
+    <arg name='enableHeadingSmoothing' value='true' />
+    <arg name="startFromFrontAxel" value="false" />
+  </include>
+
+  <include file='$(find op_local_planner)/launch/op_trajectory_evaluator.launch'>
+    <arg name="enablePrediction" value="true" />	 	
+    <arg name='keepCurrentTrajectory' value='false' />
+  </include>
+
+  <include file='$(find op_local_planner)/launch/op_behavior_selector.launch'>
+    <arg name='show_driving_path' value='true'/>
+  </include>
+</launch>

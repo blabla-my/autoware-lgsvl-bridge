@@ -1,0 +1,38 @@
+<launch>
+  <include file='$(find pure_pursuit)/launch/pure_pursuit.launch'>
+    <arg name="is_linear_interpolation" value="true"/> 
+    <arg name="minimum_lookahead_distance" value="0.01"/>
+    <arg name='const_lookahead_distance' value='8.0' />
+  </include>
+
+  <!--<include file='$(find op_waypoint_follower)/launch/op_waypoint_follower_car.launch'>
+    <arg name='max_steer_value' value='0.52' />
+    <arg name='accelerationPushRatio' value='1.0'/>
+    <arg name="brakingPushRatio" value="1.0" />
+    <arg name="control_frequency" value="50"/>
+    <arg name="steerAngleGainKP" value="0.3"/>
+    <arg name="steerAngleGainKI" value="0.05"/>
+    <arg name="steerAngleGainKD" value="0.05"/>
+    <arg name="accelGainKP" value="0.0" />
+    <arg name="accelGainKI" value="0.0"/>
+	  <arg name="accelGainKD" value="0.0"/>
+    <arg name="brakeGainKP" value="0.0"/>
+	  <arg name="brakeGainKI" value="0.0"/>
+	  <arg name="brakeGainKD" value="0.0"/>
+    <arg name="enableSimulationMode" value="0"/>
+    <arg name="pose_topic" 	value="current_pose"/>
+  	<arg name="velocity_topic" value="current_velocity"/>
+    <arg name="localizer_pose_topic" value="current_pose"/>
+    <arg name="vehicle_status_topic" value="vehicle_status"/>
+  </include>-->
+
+  <include file='$(find twist_filter)/launch/twist_filter.launch'>
+    <arg name="lateral_accel_limit" value="200.0" />
+    <arg name="enable_smoothing" value="true" />
+    <arg name="lateral_jerk_limit" value="100.0" />
+    <arg name="wheel_base" value="2.853" />  
+  </include>
+  <!--<include file="$(find op_direct_controller)/launch/op_direct_controller.launch">
+    <arg name='drive_mode' value='0'/>
+  </include>-->
+</launch>

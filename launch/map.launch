@@ -1,0 +1,21 @@
+<launch>
+
+  <arg name='map' default='ZAM_Zip-1'/>
+  <!-- Vector Map -->
+  <node pkg="map_file" type="vector_map_loader" name="vector_map_loader" args="
+   $(env HOME)/shared_dir/autoware-data/$(arg map)/area.csv
+   $(env HOME)/shared_dir/autoware-data/$(arg map)/intersection.csv
+   $(env HOME)/shared_dir/autoware-data/$(arg map)/lane.csv
+   $(env HOME)/shared_dir/autoware-data/$(arg map)/dtlane.csv
+   $(env HOME)/shared_dir/autoware-data/$(arg map)/wayarea.csv
+   $(env HOME)/shared_dir/autoware-data/$(arg map)/point.csv
+   $(env HOME)/shared_dir/autoware-data/$(arg map)/line.csv
+   $(env HOME)/shared_dir/autoware-data/$(arg map)/pole.csv
+   $(env HOME)/shared_dir/autoware-data/$(arg map)/signaldata.csv
+   $(env HOME)/shared_dir/autoware-data/$(arg map)/stopline.csv
+   $(env HOME)/shared_dir/autoware-data/$(arg map)/vector.csv
+   $(env HOME)/shared_dir/autoware-data/$(arg map)/whiteline.csv
+   $(env HOME)/shared_dir/autoware-data/$(arg map)/roadsign.csv
+   $(env HOME)/shared_dir/autoware-data/$(arg map)/node.csv" 
+  />
+</launch>

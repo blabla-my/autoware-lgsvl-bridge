@@ -1,0 +1,14 @@
+<launch>
+    <!-- <include file="$(find points_preprocessor)/launch/ring_ground_filter.launch">
+        <arg name="sensor_model" value="64" />        
+        <arg name="point_topic" value="/points_raw"></arg>
+    </include> -->
+    <include file="$(find lidar_euclidean_cluster_detect)/launch/lidar_euclidean_cluster_detect.launch">
+        <arg name="output_frame" value="map" />
+        <arg name="use_gpu" value="true" />
+        <arg name="remove_ground" value="false" />
+        <arg name="points_node" value="/points_raw" />
+    </include>
+    <include file="$(find lidar_kf_contour_track)/launch/lidar_kf_contour_track.launch">
+    </include>
+</launch>

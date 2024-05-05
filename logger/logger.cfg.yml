@@ -1,0 +1,113 @@
+---
+version: 1
+formatters:
+  console:
+    format: " [*] %(message)s"
+  logfile:
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: INFO
+    formatter: console
+    stream: ext://sys.stdout
+  logfile:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: logfile
+    filename: "fuzzer.log"
+    mode: w
+    encoding: utf-8
+  logfile-vse:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: logfile
+    filename: "vserunner.log"
+    mode: w
+    encoding: utf-8
+  logfile-test:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: logfile
+    filename: "test.log"
+    mode: a+
+    encoding: utf-8
+  logfile-LF2WP:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: logfile
+    filename: "LF2WP.log"
+    mode: a+
+    encoding: utf-8
+  logfile-tmin:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: logfile
+    filename: "tmin.log"
+    mode: a+
+    encoding: utf-8
+  logfile-saveobj:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: logfile
+    filename: "saveobj.log"
+    mode: a+
+    encoding: utf-8
+  logfile-tmininroad:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: logfile
+    filename: "tmin.log"
+    mode: a+
+    encoding: utf-8
+  logfile-replay:
+    class: logging.FileHandler
+    level: DEBUG
+    formatter: logfile
+    filename: "replay.log"
+    mode: w
+    encoding: utf-8
+
+loggers:
+  autoware-fuzzer:
+    level: DEBUG
+    handlers:
+      - console
+      - logfile
+    propagate: false
+  vse-runner:
+    level: DEBUG
+    handlers:
+      # - console
+      - logfile-vse
+  seeds-test:
+    level: DEBUG
+    handlers:
+      - console
+      - logfile-test
+  LF2WP:
+    level: DEBUG
+    handlers:
+      - console
+      - logfile-LF2WP
+  tmin:
+    level: DEBUG
+    handlers:
+      - console
+      - logfile-tmin
+  saveobj:
+    level: DEBUG
+    handlers:
+      - console
+      - logfile-saveobj
+  tmin-inroad:
+    level: DEBUG  
+    handlers:
+      - console
+      - logfile-tmininroad
+  replay:
+    level: DEBUG
+    handlers:
+      - console
+      - logfile-replay

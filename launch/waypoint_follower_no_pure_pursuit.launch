@@ -1,0 +1,11 @@
+<launch>
+
+  <include file='$(find twist_filter)/launch/twist_filter.launch'>
+    <arg name="lateral_accel_limit" value="20.0" />
+    <arg name="enable_smoothing" value="true" />
+    <arg name="wheel_base" value="2.853" />
+  </include>
+  <!--<include file="$(find op_direct_controller)/launch/op_direct_controller.launch">
+    <arg name='drive_mode' value='0'/>
+  </include>-->
+</launch>
