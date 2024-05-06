@@ -4,25 +4,25 @@ This is a simulation bridge between autoware.ai and LGSVL simulator.
 
 ## Prerequisites
 
-1. **LGSVL simulator**.  
-LGSVL simulator no longer supports its online version. Please install an [offline version](https://github.com/emocat/simulator.git).
+1. **LGSVL simulator.**  
+  LGSVL simulator no longer supports its online version. Please install an [offline version](https://github.com/emocat/simulator.git).
 
 2. **LGSVL python API.**
-https://github.com/lgsvl/PythonAPI.git
+  https://github.com/lgsvl/PythonAPI.git
 
 3. **Autoware.AI.**
-https://github.com/autowarefoundation/autoware_ai
+  https://github.com/autowarefoundation/autoware_ai
 
-4. **Autowaer.AI messages**
-https://github.com/autowarefoundation/autoware_ai_messages
+4. **Autowaer.AI messages.**
+  https://github.com/autowarefoundation/autoware_ai_messages
 
-4. autoware maps
-You need to put autoware csv maps under `$HOME/autoware-data/${map_name}`
+4. **Autoware maps.**
+  You need to put autoware csv maps under `$HOME/autoware-data/${map_name}`
 
 5. python3 packages
-```python
-python3 -m pip install -r requirements.txt
-```
+  ```python
+  python3 -m pip install -r requirements.txt
+  ```
 
 ## Usage
 Firstly, set necessary environments variable
