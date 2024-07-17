@@ -39,4 +39,3 @@ The `ftest` command will use detection ground truth as default setting, if you w
 ```bash
 $ ftest [--detection] <path_to_scenario_file>
 ```
-```
