@@ -35,3 +35,8 @@ source setup.bash # optionally, source setup.zsh if you are using zsh
 ```
 
 Then you can use `ftest` command to run a scenario file which is defined in json formmat. 
+The `ftest` command will use detection ground truth as default setting, if you want to enable detection, using `--detection` as a command line argument.
+```bash
+$ ftest [--detection] <path_to_scenario_file>
+```
+```
