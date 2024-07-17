@@ -4,7 +4,6 @@ AUTOWARE_MESSAGE_INSTALLATION_PATH="${AUTOWARE_MESSAGE_INSTALLATION_PATH:=$HOME/
 SIMULATOR_PATH="${SIMULATOR_PATH:=$HOME/Build_Local}"
 
 source $ROS_INSTALLATION_PATH/setup.zsh
-source $AUTOWARE_INSTALLATION_PATH=$HOME/autoware.ai
 source $AUTOWARE_MESSAGE_INSTALLATION_PATH/devel/setup.zsh
 source $AUTOWARE_INSTALLATION_PATH/devel/setup.zsh
 #source $HOME/src/repos/autoware.ai/autoware-1.14.0/install/setup.zsh
